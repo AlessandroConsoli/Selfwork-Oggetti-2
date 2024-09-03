@@ -32,10 +32,20 @@ let rubrica = {
         this.contacts.splice(index);  
         console.log(`Contatto rimosso: ${name_to_remove}`);        
     },
+    'editContact' : function (name, newNumber) {
+        let contatto = rubrica.contacts.find ( (contatto)=> contatto.nome == name);
+        if (contatto) {
+            contatto.telefono = newNumber;
+            console.log(`Il numero del contatto: ${contatto.nome} \ne' stato modificato in: ${contatto.telefono}`);            
+        }else{
+            console.log(`Contatto non trovato!`);            
+        }        
+    }
 }
 rubrica.showAllContacts();
 rubrica.show_contact('Paola');
 rubrica.removeContact('Jenny');
 rubrica.addContact('Vercingetorige', 1234567890);
+rubrica.editContact(`Paola`, 548555594);
 rubrica.showAllContacts();
 
