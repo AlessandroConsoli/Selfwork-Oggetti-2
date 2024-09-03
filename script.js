@@ -1,6 +1,3 @@
-// let name;
-// let number;
-
 let rubrica = {
     'contacts' : [
         {
