@@ -29,7 +29,7 @@ let rubrica = {
     'removeContact' : function (name_to_remove) {
         let nameToRemove = rubrica.contacts.find ( (nameToRemove)=> nameToRemove.nome == name_to_remove);
         let index = this.contacts.indexOf(nameToRemove); 
-        this.contacts.splice(index);  
+        this.contacts.splice(index, 1);  
         console.log(`Contatto rimosso: ${name_to_remove}`);        
     },
     'editContact' : function (name, newNumber) {
